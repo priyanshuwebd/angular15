@@ -8,12 +8,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TodoComponent } from './todo/todo.component';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatCardModule} from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+// import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    DragDropModule
+    DragDropModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
