@@ -1,7 +1,7 @@
-.mat-mdc-form-field{
+.mat-mdc-form-field {
   font-size: 15px;
   width: 100%;
-
+  
   &.mat-focused {
     font-size: 15px;
   }
@@ -14,7 +14,19 @@
   &::placeholder {
     font-size: 15px;
   }
+
+  /* Error styling for form fields */
+  &.mat-form-field-invalid .mat-input-element {
+    border-color: #f44336; /* Red border on error */
+    color: #f44336; /* Red text color */
+  }
+
+  /* Error icon styling (for form field errors) */
+  .mat-form-field-invalid .mat-error {
+    color: #f44336; /* Red color for error text */
+  }
 }
+
 .custom-form-field {
   width: 100%;
 }
@@ -24,77 +36,89 @@
 }
 
 .example-container {
-    width: 400px;
-    max-width: 100%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
-  }
+  width: 400px;
+  max-width: 100%;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
 
-  .example-list {
-    border: solid 1px #ccc;
-    min-height: 60px;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    display: block;
-  }
+.example-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
 
-  .example-box {
-    padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    cursor: move;
-    background: white;
-    font-size: 14px;
-  }
+.example-box {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+}
 
-  .cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-                0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                0 3px 14px 2px rgba(0, 0, 0, 0.12);
-  }
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
 
-  .cdk-drag-placeholder {
-    opacity: 0;
-  }
+.cdk-drag-placeholder {
+  opacity: 0;
+}
 
-  .cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
 
-  .example-box:last-child {
-    border: none;
-  }
+.example-box:last-child {
+  border: none;
+}
 
-  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
 
-  .box{
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 10px;
-  }
+.box {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
 
-  .head-title{
-    margin: 0;
-    padding: 10px;
-    background-color: rgb(228,222,222) ;
-    border-radius: 5px;
-    color:#777272;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-  }
+.head-title {
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(228, 222, 222);
+  border-radius: 5px;
+  color: #777272;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
 
-  .head-title span{
-    font-weight: normal;
-  }
+.head-title span {
+  font-weight: normal;
+}
+
+/* Add Error Styles for Buttons on Invalid Form */
+.button-wrapper button[disabled] {
+  background-color: #f44336 !important; /* Red color for disabled/invalid button */
+  color: #ffffff;
+}
+
+/* Optional: Add hover effect for error states */
+.mat-form-field-invalid .mat-input-element:hover {
+  border-color: #d32f2f; /* Darker red on hover for error */
+}
+
