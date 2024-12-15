@@ -16,12 +16,16 @@ import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    TodoComponent
+    TodoComponent,
+    UserAuthComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatIconModule,
     MatButtonModule,
     DragDropModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,24 @@
-<mat-toolbar style="background-color: #1b76f1;">
-  <h1>Google keep</h1>
-</mat-toolbar>
+<nav class="nav">
+  <h1><a routerLink="/">Google Keep</a></h1>
+  <div [ngSwitch]="menuType">
+    <!-- Default Menu -->
+    <ul *ngSwitchCase="'default'">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/user-auth">Login</a></li>
+    </ul>
+
+    <!-- User Menu -->
+    <ul *ngSwitchCase="'user'" class="user-menu">
+      <li><a routerLink="/">Home</a></li>
+      <li class="dropdown-container" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+        <div class="avatar-wrapper">
+          <img [src]="userImage || 'assets/default-avatar.png'" alt="User Avatar" class="avatar" />
+        </div>
+        <div class="dropdown-menu" *ngIf="showDropdown">
+          <p>{{ userName | titlecase }}</p>
+          <button class="btn btn-logout" (click)="userLogout()">Logout</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

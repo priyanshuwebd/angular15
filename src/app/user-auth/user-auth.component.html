@@ -1,0 +1,23 @@
+<div class="user-auth">
+    <div *ngIf="showLogin" class="login">
+      <h1>User Login</h1>
+      <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
+        <p class="error-p">{{authError}}</p>
+        <input
+          type="text"
+          class="form-input"
+          name="email"
+          placeholder="Enter User Email"
+          ngModel
+        />
+        <input
+          type="password"
+          class="form-input"
+          name="password"
+          placeholder="Enter User Password"
+          ngModel
+        />
+        <button class="form-button">Login</button>
+      </form>
+    </div>
+  </div>
