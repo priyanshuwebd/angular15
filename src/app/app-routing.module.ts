@@ -4,8 +4,9 @@ import { TodoComponent } from './todo/todo.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
-  {path:'', component:TodoComponent},
-  { path: 'user-auth', component: UserAuthComponent }
+  { path: '', component: TodoComponent, pathMatch: 'full' },
+  { path: 'user-auth', component: UserAuthComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

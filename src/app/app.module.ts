@@ -18,6 +18,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,8 +40,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     DragDropModule,
-    MatFormFieldModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
